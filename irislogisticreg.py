@@ -38,9 +38,6 @@ def run():
     X = data[['length', 'width']]
     y = data['Type']
 
-    # normalize our features
-    X = (X - X.mean()) / X.std()
-
     # add 1 column to allow vectorized calculations
     X = np.concatenate((np.ones((X.shape[0], 1)), X), axis=1)
 
